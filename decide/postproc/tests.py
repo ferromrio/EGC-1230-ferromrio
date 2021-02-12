@@ -6,15 +6,14 @@ from rest_framework.test import APITestCase
 from base import mods
 
 
-class PostProcTestExecuted(BaseTestCase):
+class PostProcTestExecuted(APITestCase):
     def setUp(self):
         super().setUp()
 
     def tearDown(self):
         super().tearDown()
     
-    def test_executed(self):
-        register_status('TEST_POSTPROC_EXECUTED')
+
         
 class PostProcTestCase(APITestCase):
 
