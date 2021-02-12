@@ -16,7 +16,7 @@ install:
   - pip install codacy-coverage
 script:
   - cd decide
-  - ./manage.py test census --keepdb 
+  - python3 ./manage.py test census --keepdb 
 notifications:
   email:
     recipients:
