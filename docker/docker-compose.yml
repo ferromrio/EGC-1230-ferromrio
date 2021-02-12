@@ -5,10 +5,12 @@ services:
     restart: always
     container_name: decide_db
     image: postgres:alpine
-    volumes:
-      - db:/var/lib/postgresql/data
+    #volumes:
+      #- db:/var/lib/postgresql/data
     networks:
       - decide
+    environment:
+      - POSTGRES_PASSWORD=postgres
   web:
     restart: always
     container_name: decide_web
@@ -42,8 +44,8 @@ services:
 volumes:
   static:
     name: decide_static
-  db:
-    name: decide_db
+  #db:
+    #name: decide_db
 
 networks:
   decide:
